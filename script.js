@@ -13,24 +13,24 @@ const button = document.getElementById('btn-getstarted');
 button.addEventListener('click',geo);
 
 function geo(){
-    console.log("geo");
+    // console.log("geo");
     fetch('https://api.ipify.org?format=json')
 .then(response => response.json())
 .then(data => {
     const ip2 = data.ip;
-    console.log("ipfetch done");
+    // console.log("ipfetch done");
 
     fetch(`https://ipinfo.io/${ip2}/geo`)
     .then(response=>response.json())
     .then(data=>{
-        console.log(data)
+        // console.log(data)
         const homepage = document.getElementById('homepage');
         homepage.style.display = 'none';
         const secondpage = document.getElementById('secondpage');
         secondpage.style.display='block';
     
         const newip = document.getElementById('ipaddy2');
-        console.log(newip);
+        // console.log(newip);
         newip.innerHTML = `${ip2} `;
         
         const long = document.getElementById('longspan');
@@ -55,9 +55,9 @@ function geo(){
         const pincode = document.getElementById('pincode');
 
         timezone.innerHTML=`${data.timezone}`;
-        console.log(data.timezone);
+        // console.log(data.timezone);
         let properdatetime = new Date().toLocaleString("en-US",{ timeZone: `${data.timezone}` });
-       console.log(properdatetime);
+    //    console.log(properdatetime);
         datetime.innerHTML=`${properdatetime}`;
         pincode.innerHTML=`${data.postal};`
 
@@ -74,14 +74,14 @@ fetch(`https://api.postalpincode.in/pincode/${data.postal}`)
     const message = document.getElementById('pinfound');
     //console.log(office[0].Message);
     message.innerHTML=`${office[0].Message}`;
-    console.log(office);
-    console.log(office[0].PostOffice[0]);
+    // console.log(office);
+    // console.log(office[0].PostOffice[0]);
     const searchresult = document.getElementById('searchresult');
     display(office[0].PostOffice);
     
     function display(arr){
         const results = arr.length;
-        console.log(results);
+        // console.log(results);
         for(let i=0;i<results;i++){
 
            const newdiv =  document.createElement('div');
@@ -116,23 +116,20 @@ fetch(`https://api.postalpincode.in/pincode/${data.postal}`)
 }
 
 const searchterm = document.getElementById('search');
-searchterm.addEventListener('keyup',e=>{
-
+searchterm.addEventListener('input',(e)=>{
+    // const searchQuery=e.target.value.toLowerCase();
+    // const postOfficeList=document.getElementById('searchresult').children;
+    // console.log(postOfficeList);
+    // Array.from(postOfficeList).forEach(item =>{
+    //     const postOfficeName=item.children[0].textContent.split(": ")[1].toLowerCase();
+    //     if(postOfficeName.includes(searchQuery)){
+    //         item.style.display="none";
+    //     }else{
+    //         item.style.display="block";
+    //     }
+    //     console.log(postOfficeName);
+    // });
     let key = e.target.value;
-    console.log(key);
+     console.log(key);
 });
 }
-    
-
-
-
-
-
-// btn.addEventListener('click',geo);
-
-// function geo(){
-// console.log("geo");
-//     const homepage = document.getElementById('homepage');
-//     // homepage.style.display = 'none';
-
-// }

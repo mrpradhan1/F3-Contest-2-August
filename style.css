@@ -2,6 +2,8 @@
     margin:0px;
     box-sizing: border-box;
     padding:0px;
+    background-color: black;
+    color: white;
 }
 
 #homepage{
@@ -37,7 +39,7 @@
 
 
 #getstarted{
-background-color: rgb(77, 6, 164);
+background-color: rgb(77, 6, 164) ;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -49,8 +51,9 @@ padding-top:200px;
 
 }
 #ipaddress{
-    color:rgb(190, 183, 183);
+    color:rgb(190, 183, 183) ;
     text-align: center;
+    background-color: transparent;
     
 }
 
@@ -60,13 +63,14 @@ padding-top:200px;
 #ipaddy{
     color:white;
     font-weight: bold;
+    background-color: transparent;
 }
 
 #btn-getstarted{
     color:white;
     border-radius: 5px;
-    width:80px;
-    height:32px;
+    width:170px;
+    height:38px;
     background: transparent;
     text-align: center;
     box-shadow: none;
@@ -87,7 +91,7 @@ padding-top:200px;
 }
 
 #latlong{
-    border:1px solid red;
+    /* border:1px solid red; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -99,42 +103,36 @@ padding-top:200px;
 }
 
 #lat{
-    border: 1px solid green;
     width: 30%;
     height: 24px;
     font-weight: bold;
     
 }
 #long{
-    border: 1px solid rgb(41, 23, 141);
     width: 30%;
     height: 24px;
     font-weight: bold;
     
 }
 #city{
-    border: 1px solid rgb(85, 9, 87);
     width: 30%;
     height: 24px;
     font-weight: bold;
     
 }
 #region{
-    border: 1px solid green;
     width: 30%;
     height: 24px;
     font-weight: bold;
     
 }
 #org{
-    border: 1px solid green;
     width: 30%;
     height: 24px;
     font-weight: bold;
     
 }
 #hostname{
-    border: 1px solid green;
     width: 30%;
     height: 24px;
     font-weight: bold;
@@ -144,11 +142,14 @@ padding-top:200px;
 #gmap{
     width:100%;
     height:90vh;
+    background-color: #575a85;
+    padding-top: 10px;
 }
 
 #gmap h2{
     margin-top:60px;
     margin-left: 600px;
+    background-color: #575a85;
 }
 
 #map{
@@ -185,19 +186,23 @@ padding-top:200px;
 }
 
 .result{
-    padding: 50px;
-    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
     border: 1px solid black;
-    background-color: blue;
+    background-color: #575a85;
     color:white;
     display: flex;
     gap:10px;
     flex-direction: column;
     width: 30%;
-    height: 50vh;
+    height: 30vh;
     margin-top: 30px;
-    margin-left: 80px;
+    margin-left: 60px;
 }
+h3{
+    background-color: transparent;
+}
+
 #search{
     width: 80%;
     box-shadow: none;
@@ -208,6 +213,12 @@ padding-top:200px;
     text-align: center;
     margin-top: 60px;
     margin-left: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+input{
+    background-color: transparent;
 }
 
 #postofficenearyou{
